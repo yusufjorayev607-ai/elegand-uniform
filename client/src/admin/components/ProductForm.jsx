@@ -295,7 +295,7 @@ function ProductForm({ mode = 'create', product = null, onSuccess, onCancel }) {
 		onChange={e =>
 			setPrice(e.target.value.replace(/\s/g, '').replace(/\D/g, ''))
 		}
-		placeholder="Masalan: 150 000"
+		
 		required
 	/>
 
