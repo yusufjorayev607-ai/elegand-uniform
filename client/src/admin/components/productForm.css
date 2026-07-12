@@ -1,0 +1,110 @@
+.product-form {
+	max-width: 600px;
+	margin: 20px auto;
+	padding: 20px;
+}
+
+.product-form__langs {
+	display: flex;
+	gap: 8px;
+	margin-bottom: 12px;
+	flex-wrap: wrap;
+}
+
+.product-form__langs button {
+	padding: 8px 16px;
+	border: 1px solid #ccc;
+	background: #fff;
+	cursor: pointer;
+	border-radius: 6px;
+}
+
+.product-form__langs button.active {
+	background: #222;
+	color: #fff;
+	border-color: #222;
+}
+
+.product-form__copy-btn {
+	display: block;
+	margin-bottom: 14px;
+	padding: 6px 12px;
+	background: #eef;
+	border: 1px dashed #556;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 13px;
+}
+
+.product-form__form {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.product-form__form label {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.product-form__form input,
+.product-form__form textarea,
+.product-form__form select {
+	padding: 8px 10px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	font-size: 14px;
+	background: #fff;
+}
+
+.product-form__form textarea {
+	min-height: 80px;
+	resize: vertical;
+}
+
+.product-form__actions {
+	display: flex;
+	gap: 10px;
+}
+
+.product-form__actions button[type='submit'] {
+	flex: 1;
+	padding: 10px;
+	background: #222;
+	color: #fff;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 15px;
+}
+
+.product-form__actions button[type='submit']:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+.product-form__cancel-btn {
+	padding: 10px 16px;
+	background: #eee;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 15px;
+}
+
+.product-form__preview {
+	width: 150px;
+	border-radius: 8px;
+	object-fit: cover;
+}
+
+.product-form__error {
+	color: #d32f2f;
+}
+
+.product-form__success {
+	color: #2e7d32;
+}

@@ -1,0 +1,282 @@
+{
+	"header": {
+		"about": "BIZ HAQIMIZDA",
+		"services": "XIZMATLAR",
+		"portfolio": "PORTFOLIO",
+		"contact": "KONTAKT"
+	},
+	"hero": {
+		"title": "Korxonangiz uchun maxsus kiyimlar ishlab chiqaramiz",
+		"description": "Aysel Energy, CY-90, DreamLevel, SHUMBOLA, Schneider Electric, Zmart, Artel va boshqa yirik kompaniyalarning ishonchli hamkori",
+		"orderBtn": "BUYURTMA BERISH",
+		"portfolioBtn": "PORTFOLIO KO'RISH"
+	},
+	"partners": {
+		"title": "Bizga ishonch bildirgan hamkorlarimiz"
+	},
+	"services": {
+		"title": "Xizmatlarimiz",
+
+		"workwear": {
+			"title": "Ishchi formalar",
+			"description": "Zavod, qurilish va ishlab chiqarish korxonalari uchun."
+		},
+
+		"corporate": {
+			"title": "Korporativ kiyimlar",
+			"description": "Ofis va xizmat ko'rsatish xodimlari uchun."
+		},
+
+		"custom": {
+			"title": "Maxsus buyurtmalar",
+			"description": "Mijoz namunasi asosida tikish."
+		},
+
+		"mass-production": {
+			"title": "Ommaviy ishlab chiqarish",
+			"description": "Katta hajmdagi buyurtmalar uchun."
+		}
+	},
+	"portfolio": {
+		"title": "Portfolio",
+		"partfolioPageTitle": "BARCHA ISHLARIMIZNI KO'RISH",
+		"labels": {
+			"material": "Matosi",
+			"season": "Mavsumi",
+			"color": "Rangi"
+		}
+	},
+	"portfolioPage": {
+		"title": "PORTFOLIO",
+		"backBtn": "ORTGA",
+		"categories": {
+			"summer": "Yozgi kiyimlar",
+			"winter": "Qishki kiyimlar",
+			"shoes": "Oyoq kiyimlari",
+			"protection": "Himoya vositalari",
+			"mass": "Ommaviy kiyimlar"
+		}
+	},
+	"about": {
+		"label": "Biz haqimizda",
+		"title": "Tajriba va sifatga asoslangan ishlab chiqarish",
+		"description": "Kompaniyamiz korporativ ishchi formalar, maxsus kiyimlar va individual buyurtmalar ishlab chiqarishga ixtisoslashgan.",
+		"features": {
+			"quality": "Sifatli matolar",
+			"specialists": "Tajribali mutaxassislar",
+			"delivery": "O'z vaqtida yetkazib berish",
+			"approach": "Individual yondashuv"
+		},
+		"button": "KO'PROQ MA'LUMOT"
+	},
+
+	"contact": {
+		"title": "Aloqa",
+
+		"phone": {
+			"title": "Telefon",
+			"info": "Dushanba–Shanba\n09:00–19:00"
+		},
+
+		"telegram": {
+			"title": "Telegram",
+			"info": "Tezkor javob"
+		},
+
+		"email": {
+			"title": "Email",
+			"info": "24 soat ichida javob"
+		},
+
+		"address": {
+			"title": "Manzil",
+			"city": "Toshkent sh.",
+			"district": "Shayxontohur tumani"
+		}
+	},
+	"form": {
+		"name": "Ismingiz *",
+		"company": "Kompaniya nomi *",
+		"selectProduct": "Qanday mahsulot kerak?",
+		"phone": "+998 90 123 45 67",
+		"send": "YUBORISH",
+		"sending": "Yuborilmoqda...",
+		"successTitle": "Muvaffaqiyatli yuborildi!",
+		"successText": "Tez orada siz bilan bog'lanamiz.",
+		"newRequest": "Yangi ariza",
+		"error": "Xatolik yuz berdi. Qayta urinib ko'ring.",
+		"products": {
+			"workwear": "Ishchi forma",
+			"corporate": "Korporativ forma",
+			"custom": "Maxsus buyurtma",
+			"mass": "Ommaviy kiyimlar"
+		},
+		"errors": {
+			"name": "Ismingizni kiriting",
+			"company": "Kompaniya nomini kiriting",
+			"product": "Mahsulot turini tanlang",
+			"phone": "Telefon raqamini kiriting",
+			"phoneFormat": "Format: +998 90 123 45 67 yoki 90 123 45 67"
+		}
+	},
+	"telegram": {
+		"title": "Yangi ariza",
+		"name": "Ism",
+		"company": "Kompaniya",
+		"product": "Mahsulot",
+		"phone": "Telefon"
+	},
+	"aboutDetailsHero": {
+		"eyebrow": "Sifat – Ishonch – Mas'uliyat",
+		"title": {
+			"line1": "Sifatli tikuv.",
+			"line2": "Ishonchli hamkorlik."
+		},
+		"description": "Har bir buyurtma ortida katta mas'uliyat turadi. Biz uchun sifat – bu shunchaki tikuv emas, bu mijozimizning bizga bo'lgan ishonchidir.",
+		"features": {
+			"quality": {
+				"title": "Sifat kafolati",
+				"description": "Har bir mahsulot sifat nazoratidan o'tadi"
+			},
+			"responsibility": {
+				"title": "Mas'uliyatli yondashuv",
+				"description": "Buyurtmangizni o'z biznesimizdek qabul qilamiz"
+			},
+			"partnership": {
+				"title": "Ishonchli hamkor",
+				"description": "Muddat va sifatga so'zimiz bor"
+			}
+		},
+		"video": {
+			"alt": "Ishlab chiqarish jarayoni",
+			"text": "Bizning ishlab chiqarish jarayonimiz"
+		}
+	},
+	"promise": {
+		"title": {
+			"line1": "Biz faqat sifatli mahsulot emas,",
+			"line2": "ishonch va xotirjamlik ham yetkazib beramiz."
+		},
+		"description": "Mijozimiz bizga ishonganida, biz yanada yaxshiroq ishlaymiz. Sizning muvaffaqiyatingiz – bizning eng katta maqsadimiz."
+	},
+	"values": {
+		"eyebrow": "Bizning qadriyatlarimiz",
+		"title": "Bizni boshqalardan ajratib turadigan narsa.",
+		"cards": {
+			"quality": {
+				"title": "Sifat",
+				"description": "Yuqori sifatli materiallar va mukammal tikuv – bizning standartimiz."
+			},
+			"trust": {
+				"title": "Ishonch",
+				"description": "Har bir buyurtma – bu bizga bildirilgan ishonch. Biz uni qadrlaymiz."
+			},
+			"time": {
+				"title": "Muddat",
+				"description": "Vaqt – bu pul. Shuning uchun biz har doim vaqtida yetkazamiz."
+			},
+			"precision": {
+				"title": "Aniqlik",
+				"description": "Har bir detalda aniqlik va puxtalik – mukammal natijaning garovi."
+			}
+		}
+	},
+	"whyUs": {
+		"eyebrow": "Nima uchun biz?",
+		"title": "Siz uchun faqat yaxshisini tanlaymiz.",
+		"cards": {
+			"materials": {
+				"title": "Premium materiallar",
+				"description": "Faqat sinovdan o'tgan va sertifikatlangan materiallardan foydalanamiz."
+			},
+			"equipment": {
+				"title": "Zamonaviy uskunalar",
+				"description": "So'nggi texnologiyali uskunalar yordamida aniq va sifatli ishlab chiqarish."
+			},
+			"team": {
+				"title": "Tajribali jamoa",
+				"description": "10+ yillik tajribaga ega mutaxassislar jamoasi bilan ishlaymiz."
+			},
+			"quality": {
+				"title": "Sifat nazorati",
+				"description": "Har bir mahsulot bir necha bosqichli sifat nazoratidan o'tadi."
+			},
+			"delivery": {
+				"title": "O'z vaqtida yetkazish",
+				"description": "Belgilangan muddatda ishonchli va xavfsiz yetkazib berish."
+			},
+			"approach": {
+				"title": "Individual yondashuv",
+				"description": "Har bir mijozning ehtiyojidan kelib chiqib, yagona yechim taklif qilamiz."
+			}
+		}
+	},
+	"testimonials": {
+		"eyebrow": "Mijozlar fikri",
+		"title": "Ular bizga ishonishadi.",
+		"items": {
+			"1": {
+				"name": "Asil Textile",
+				"company": "Xarid bo'limi rahbari",
+				"text": "Buyurtmamiz belgilangan muddatda va juda sifatli tayyorlandi. Jamoa bilan ishlash juda yoqimli va samarali bo'ldi."
+			},
+			"2": {
+				"name": "Modern Wear",
+				"company": "Direktor",
+				"text": "Sifat, aniqlik va mas'uliyat – bularning hammasini Details jamoasida topdik. Doim bizning kutganimizdan ham yaxshi."
+			},
+			"3": {
+				"name": "Elegant Boutique",
+				"company": "Sotib olish menejeri",
+				"text": "Kiyimlar sifati a'lo darajada. Har bir detalga e'tibor berishlari bizni hayratda qoldirdi."
+			},
+			"4": {
+				"name": "Urban Style",
+				"company": "Brend egasi",
+				"text": "Uzoq muddatli hamkorlik uchun ishonchli va mas'uliyatli ishlab chiqaruvchi. Tavsiya qilamiz!"
+			}
+		}
+	},
+	"faq": {
+		"eyebrow": "Ko'p beriladigan savollar",
+		"title": "Savollaringiz bormi?",
+		"items": {
+			"1": {
+				"question": "Minimal buyurtma miqdori qancha?",
+				"answer": "Buyurtma miqdori mahsulot turiga qarab belgilanadi. Batafsil ma'lumot uchun biz bilan bog'laning."
+			},
+			"2": {
+				"question": "Buyurtma tayyor bo'lishi qancha vaqt oladi?",
+				"answer": "Bu mahsulot turi va soniga bog'liq. Odatda ishlab chiqarish muddati oldindan kelishiladi."
+			},
+			"3": {
+				"question": "O'z dizaynim bo'yicha tikib bera olasizmi?",
+				"answer": "Ha. Sizning dizayningiz, o'lchamingiz va talablaringiz asosida mahsulot ishlab chiqaramiz."
+			},
+			"4": {
+				"question": "Yetkazib berish xizmatini ham taklif qilasizmi?",
+				"answer": "Ha. Buyurtmalarni kelishilgan manzilga ishonchli tarzda yetkazib beramiz."
+			},
+			"5": {
+				"question": "Sifat qanday nazorat qilinadi?",
+				"answer": "Har bir mahsulot ishlab chiqarishning bir necha bosqichida tekshiriladi va yakuniy nazoratdan o'tadi."
+			}
+		},
+		"cta": {
+			"title": "Loyihangizni birgalikda amalga oshiramiz.",
+			"description": "Sizning g'oyangiz – bizning tajribamiz va sifatli ishlab chiqarishimiz bilan mukammal mahsulotga aylanadi.",
+			"order": "Buyurtma berish",
+			"telegram": "Telegram orqali bog'lanish"
+		}
+	},
+	"seo": {
+		"home": {
+			"title": "Maxsus ish kiyimlari ishlab chiqarish | Uniforma",
+			"description": "Korxonalar uchun sifatli maxsus ish kiyimlari, uniformalar va korporativ kiyimlar ishlab chiqaramiz."
+		},
+		"portfolio": {
+			"title": "Portfolio | Uniforma",
+			"description": "Biz ishlab chiqargan maxsus ish kiyimlari va uniformalar loyihalari bilan tanishing."
+		}
+	}
+}
