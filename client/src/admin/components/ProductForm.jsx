@@ -286,7 +286,7 @@ function ProductForm({ mode = 'create', product = null, onSuccess, onCancel }) {
 		inputMode='numeric'
 		value={price}
 		onChange={e => setPrice(e.target.value.replace(/\D/g, ''))}
-		placeholder='masalan: 150000'
+		
 		required
 	/>
 </label>
