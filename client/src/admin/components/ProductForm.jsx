@@ -279,10 +279,18 @@ function ProductForm({ mode = 'create', product = null, onSuccess, onCancel }) {
 
 				<hr />
 
-				<label>
-					Narx
-					<input type='text' value={price} onChange={e => setPrice(e.target.value)} required />
-				</label>
+			<label>
+	Narx
+	<input
+		type='text'
+		inputMode='numeric'
+		value={price}
+		onChange={e => setPrice(e.target.value.replace(/\D/g, ''))}
+		placeholder='masalan: 150000'
+		required
+	/>
+</label>
+
 
 				<label>
 					Kategoriya
