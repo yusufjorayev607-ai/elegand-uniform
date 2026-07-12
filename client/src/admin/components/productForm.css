@@ -25,6 +25,25 @@
 	border-color: #222;
 }
 
+.product-form__translate-btn {
+	display: block;
+	width: 100%;
+	margin-bottom: 14px;
+	padding: 10px;
+	background: #e8f4ff;
+	border: 1px solid #4a90d9;
+	color: #1a5aa0;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.product-form__translate-btn:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
 .product-form__copy-btn {
 	display: block;
 	margin-bottom: 14px;
