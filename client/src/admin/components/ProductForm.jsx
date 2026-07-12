@@ -12,6 +12,14 @@ const langs = [
 	{ code: 'zh', label: '中文' },
 ]
 
+// MyMemory tarjima xizmati kutgan til kodlari (zh uchun zh-CN kerak)
+const translateLangCodes = {
+	ru: 'ru',
+	en: 'en',
+	tr: 'tr',
+	zh: 'zh-CN',
+}
+
 const categories = [
 	{ value: 'sezon-yozgi', label: 'Sezon - Yozgi' },
 	{ value: 'sezon-qishki', label: 'Sezon - Qishki' },
@@ -28,6 +36,21 @@ const createEmptyTranslations = () => ({
 	zh: { ...emptyLang },
 })
 
+// Bepul MyMemory tarjima API orqali bitta matnni tarjima qiladi
+async function translateText(text, targetLangCode) {
+	if (!text || !text.trim()) return ''
+	try {
+		const res = await fetch(
+			`https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=uz|${targetLangCode}`
+		)
+		const data = await res.json()
+		return data?.responseData?.translatedText || text
+	} catch {
+		// Tarmoq xatosi bo'lsa, tarjima qilinmagan matnni qaytaradi (nusxalashga o'xshab)
+		return text
+	}
+}
+
 // mode: 'create' | 'edit'
 // product: tahrirlash uchun mavjud mahsulot obyekti (edit rejimida majburiy)
 // onSuccess: muvaffaqiyatli yuborilgandan keyin chaqiriladi
@@ -43,6 +66,7 @@ function ProductForm({ mode = 'create', product = null, onSuccess, onCancel }) {
 	)
 	const [status, setStatus] = useState(null) // null | 'loading' | 'success' | 'error'
 	const [message, setMessage] = useState('')
+	const [isTranslating, setIsTranslating] = useState(false)
 
 	const isEdit = mode === 'edit'
 	const existingImageUrl = product?.image ? `${API_BASE_URL}${product.image}` : null
@@ -54,6 +78,7 @@ function ProductForm({ mode = 'create', product = null, onSuccess, onCancel }) {
 		}))
 	}
 
+	// O'zbekcha tabdagi matnlarni qolgan 4 tilga so'zma-so'z nusxalaydi
 	const handleCopyFromUz = () => {
 		setTranslations(prev => ({
 			...prev,
@@ -62,6 +87,55 @@ function ProductForm({ mode = 'create', product = null, onSuccess, onCancel }) {
 			tr: { ...prev.uz },
 			zh: { ...prev.uz },
 		}))
+	}
+
+	// O'zbekcha tabdagi matnlarni qolgan 4 tilga AVTOMATIK TARJIMA qiladi
+	const handleAutoTranslate = async () => {
+		const uzFields = translations.uz
+		const hasContent = Object.values(uzFields).some(v => v && v.trim())
+		if (!hasContent) {
+			setMessage("Avval o'zbekcha maydonlarni to'ldiring")
+			setStatus('error')
+			return
+		}
+
+		setIsTranslating(true)
+		setMessage('')
+
+		try {
+			const targetLangs = ['ru', 'en', 'tr', 'zh']
+			const fieldNames = ['title', 'description', 'material', 'season', 'color']
+
+			// Barcha til va maydon kombinatsiyalarini parallel tarjima qilamiz
+			const results = await Promise.all(
+				targetLangs.map(async lang => {
+					const translatedFields = await Promise.all(
+						fieldNames.map(field => translateText(uzFields[field], translateLangCodes[lang]))
+					)
+					const fieldsObj = {}
+					fieldNames.forEach((field, i) => {
+						fieldsObj[field] = translatedFields[i]
+					})
+					return [lang, fieldsObj]
+				})
+			)
+
+			setTranslations(prev => {
+				const updated = { ...prev }
+				results.forEach(([lang, fieldsObj]) => {
+					updated[lang] = fieldsObj
+				})
+				return updated
+			})
+
+			setStatus('success')
+			setMessage("Tarjima qilindi! Tekshirib, kerak bo'lsa tuzating.")
+		} catch {
+			setStatus('error')
+			setMessage("Tarjima qilishda xatolik yuz berdi. Internetni tekshiring yoki qo'lda to'ldiring.")
+		} finally {
+			setIsTranslating(false)
+		}
 	}
 
 	const handleImageChange = e => {
@@ -134,9 +208,22 @@ function ProductForm({ mode = 'create', product = null, onSuccess, onCancel }) {
 				))}
 			</div>
 
+			{activeLang === 'uz' && (
+				<button
+					type='button'
+					className='product-form__translate-btn'
+					onClick={handleAutoTranslate}
+					disabled={isTranslating}
+				>
+					{isTranslating
+						? 'Tarjima qilinmoqda...'
+						: '🌐 Avtomatik tarjima qilish (4 tilga)'}
+				</button>
+			)}
+
 			{activeLang !== 'uz' && (
 				<button type='button' className='product-form__copy-btn' onClick={handleCopyFromUz}>
-					O'zbekchadan barcha tillarga nusxalash
+					O'zbekchadan so'zma-so'z nusxalash
 				</button>
 			)}
 
