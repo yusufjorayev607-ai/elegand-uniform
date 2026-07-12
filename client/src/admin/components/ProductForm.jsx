@@ -3,6 +3,12 @@ import { API_BASE_URL, API_URL } from '../../config/api'
 import './productForm.css'
 
 const emptyLang = { title: '', description: '', material: '', season: '', color: '' }
+const formatPrice = value => {
+
+	return value.replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
+
+}
+
 
 const langs = [
 	{ code: 'uz', label: "O'zbekcha" },
@@ -279,16 +285,20 @@ function ProductForm({ mode = 'create', product = null, onSuccess, onCancel }) {
 
 				<hr />
 
-			<label>
+		<label>
+
 	Narx
 	<input
-		type='text'
-		inputMode='numeric'
-		value={price}
-		onChange={e => setPrice(e.target.value.replace(/\D/g, ''))}
-		
+		type="text"
+		inputMode="numeric"
+		value={formatPrice(price)}
+		onChange={e =>
+			setPrice(e.target.value.replace(/\s/g, '').replace(/\D/g, ''))
+		}
+		placeholder="Masalan: 150 000"
 		required
 	/>
+
 </label>
 
 
